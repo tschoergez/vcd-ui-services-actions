@@ -14,22 +14,34 @@ export class VappRestoreActionComponent extends EntityActionExtensionComponent {
 
     getMenuEntry(entityUrn: string): Observable<EntityActionExtensionMenuEntry> {
         return Observable.of({
-            text: "Restore",
+            text: "Add Services",
             children: [{
-                urn: "urn:vmware:vcloud:vapp:restore",
-                text: "Restore VMs...",
+                urn: "urn:vmware:vcloud:vapp:addOsAdmin",
+                text: "Add OS Admin",
                 busy: false,
                 enabled: true
             },
             {
-                urn: "urn:vmware:vcloud:vapp:restoreAll",
-                text: "Restore All VMs",
+                urn: "urn:vmware:vcloud:vapp:addMonitoring",
+                text: "Add Monitoring",
                 busy: false,
-                enabled: false
+                enabled: true
             },
             {
-                urn: "urn:vmware:vcloud:vapp:viewSnaphots",
-                text: "View Restore Points...",
+                urn: "urn:vmware:vcloud:vapp:addPatching",
+                text: "Add Patching",
+                busy: false,
+                enabled: true
+            },
+            {
+                urn: "urn:vmware:vcloud:vapp:addAntivirus",
+                text: "Add Anti-Virus",
+                busy: false,
+                enabled: true
+            },
+            {
+                urn: "urn:vmware:vcloud:vapp:addBackup",
+                text: "Add Backups",
                 busy: false,
                 enabled: true
             }]

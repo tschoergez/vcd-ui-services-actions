@@ -14,18 +14,36 @@ export class VmBackupActionComponent extends EntityActionExtensionComponent {
 
     getMenuEntry(entityUrn: string): Observable<EntityActionExtensionMenuEntry> {
         return Observable.of({
-            text: "Backup",
+           text: "Add Services",
             children: [{
-                urn: "urn:vmware:vcloud:vm:backup",
-                text: "Backup",
+                urn: "urn:vmware:vcloud:vapp:addOsAdmin",
+                text: "Add OS Admin",
                 busy: false,
                 enabled: true
             },
             {
-                urn: "urn:vmware:vcloud:vm:deleteBackup",
-                text: "Delete Backups",
+                urn: "urn:vmware:vcloud:vapp:addMonitoring",
+                text: "Add Monitoring",
                 busy: false,
-                enabled: false
+                enabled: true
+            },
+            {
+                urn: "urn:vmware:vcloud:vapp:addPatching",
+                text: "Add Patching",
+                busy: false,
+                enabled: true
+            },
+            {
+                urn: "urn:vmware:vcloud:vapp:addAntivirus",
+                text: "Add Anti-Virus",
+                busy: false,
+                enabled: true
+            },
+            {
+                urn: "urn:vmware:vcloud:vapp:addBackup",
+                text: "Add Backups",
+                busy: false,
+                enabled: true
             }]
         });
     }
